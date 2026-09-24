@@ -1,0 +1,18 @@
+{
+  "name": "inventario-ti-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API que lê e grava diretamente na planilha de inventário de TI.",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.19.2"
+  }
+}
