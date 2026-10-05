@@ -22,6 +22,7 @@ export default function EquipamentoTable({ items, onEdit, onDelete }) {
         <thead>
           <tr>
             <th>Equipamento / Modelo</th>
+            <th>Categoria</th>
             <th>Nº de Série</th>
             <th>Inclusão</th>
             <th>Exclusão</th>
@@ -38,6 +39,7 @@ export default function EquipamentoTable({ items, onEdit, onDelete }) {
                 <br />
                 <span className="muted">{it.modelo}</span>
               </td>
+              <td>{it.categoria || <span className="muted">—</span>}</td>
               <td>{it.serie || <span className="muted">—</span>}</td>
               <td>{fmtDate(it.dataInclusao)}</td>
               <td>{fmtDate(it.dataExclusao)}</td>

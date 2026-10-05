@@ -10,3 +10,5 @@ module.exports = {
     path.resolve(__dirname, '../../data/inventario_equipamentos_ti.xlsx'),
   SHEET_NAME: 'Inventário',
 };
+
+

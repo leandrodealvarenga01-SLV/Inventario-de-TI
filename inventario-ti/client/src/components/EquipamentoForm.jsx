@@ -19,14 +19,14 @@ const CATEGORIAS = [
   'Monitor',
   'Servidor',
   'Impressora',
-  'No-break',
+  'Tablet',
   'Switch/Roteador',
   'Periférico',
-  'Celular/Tablet',
+  'Celular',
   'Outro',
 ];
 
-const STATUSES = ['Ativo', 'Em manutenção', 'Emprestado', 'Baixado/Excluído', 'Extraviado'];
+const STATUSES = ['Ativo', 'Em manutenção', 'Emprestado', 'Excluído', 'Extraviado'];
 
 export default function EquipamentoForm({ editingItem, onSubmit, onCancel }) {
   const [form, setForm] = useState(EMPTY);

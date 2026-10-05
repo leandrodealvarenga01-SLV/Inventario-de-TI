@@ -1,6 +1,6 @@
 const CLASS_BY_STATUS = {
   Ativo: 'status status--ativo',
-  'Baixado/Excluído': 'status status--baixado',
+  'Excluído': 'status status--baixado',
 };
 
 export default function StatusBadge({ status }) {
