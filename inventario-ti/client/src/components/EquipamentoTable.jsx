@@ -21,14 +21,16 @@ export default function EquipamentoTable({ items, onEdit, onDelete }) {
       <table>
         <thead>
           <tr>
-            <th>Equipamento / Modelo</th>
+            <th>Equipamento</th>
+            <th>Modelo</th>
             <th>Categoria</th>
             <th>Nº de Série</th>
             <th>Inclusão</th>
             <th>Exclusão</th>
             <th>Status</th>
-            <th>Local / Responsável</th>
-            <th></th>
+            <th>Local</th>
+            <th>Responsável</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -36,9 +38,8 @@ export default function EquipamentoTable({ items, onEdit, onDelete }) {
             <tr key={it.id}>
               <td>
                 <strong>{it.equipamento}</strong>
-                <br />
-                <span className="muted">{it.modelo}</span>
               </td>
+              <td>{it.modelo || <span className="muted">—</span>}</td>
               <td>{it.categoria || <span className="muted">—</span>}</td>
               <td>{it.serie || <span className="muted">—</span>}</td>
               <td>{fmtDate(it.dataInclusao)}</td>
@@ -46,18 +47,17 @@ export default function EquipamentoTable({ items, onEdit, onDelete }) {
               <td>
                 <StatusBadge status={it.status} />
               </td>
+              <td>{it.localizacao || <span className="muted">—</span>}</td>
+              <td>{it.responsavel || <span className="muted">—</span>}</td>
               <td>
-                {it.localizacao || <span className="muted">—</span>}
-                <br />
-                <span className="muted">{it.responsavel}</span>
-              </td>
-              <td className="rowbtns">
-                <button className="btn-ghost" onClick={() => onEdit(it)}>
-                  Editar
-                </button>
-                <button className="btn-ghost" onClick={() => onDelete(it)}>
-                  Excluir
-                </button>
+                <div className="rowbtns">
+                  <button className="btn-ghost" onClick={() => onEdit(it)}>
+                    Editar
+                  </button>
+                  <button className="btn-ghost" onClick={() => onDelete(it)}>
+                    Excluir
+                  </button>
+                </div>
               </td>
             </tr>
           ))}
